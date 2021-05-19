@@ -12,7 +12,7 @@
   
   &:hover .checkbox-mark {
     border: {
-      color: getPrimaryColor(300);
+      color: getPrimaryColor(brighten);
     }
   }
 }
@@ -63,7 +63,7 @@ input {
 .checkbox-container input:checked {
   & ~ .checkbox-mark {
     background: {
-      color: getPrimaryColor(300);
+      color: getPrimaryColor(brighten);
     };
     border: none;
 

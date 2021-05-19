@@ -18,7 +18,7 @@ input {
       width: 2px;
       style: solid;
       radius: 10px;
-      color: getPrimaryColor(300);
+      color: getPrimaryColor(brighten);
     }
 
     box-shadow: $default-box-shadow;

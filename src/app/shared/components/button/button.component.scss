@@ -10,11 +10,11 @@
 * - Button Display Type
 */
 
-$default-primary-color: getPrimaryColor(300);
-$effects-primary-color: getPrimaryColor(500);
+$default-primary-color: getPrimaryColor();
+$effects-primary-color: getPrimaryColor(darken);
 
-$default-secondary-color: getSecondaryColor(300);
-$effects-secondary-color: getSecondaryColor(500);
+$default-secondary-color: getSecondaryColor(base);
+$effects-secondary-color: getSecondaryColor(darken);
 
 $box-shadow-default: 100px 0 0 0 rgba(0, 0, 0, 0.15) inset,
                     -100px 0 0 0 rgba(0, 0, 0, 0.15) inset;
@@ -183,7 +183,7 @@ button {
   }
 
   &.btn-color-primary {
-    border: 2px solid getPrimaryColor(200);
+    border: 2px solid getPrimaryColor(darken);
     color: $effects-primary-color;
     &:hover:not(:disabled) {
       border: $effects-primary-color;
@@ -193,7 +193,7 @@ button {
   }
 
   &.btn-color-secondary {
-    border: 2px solid getSecondaryColor();
+    border: 2px solid getSecondaryColor(base);
     color: $effects-secondary-color;
     &:hover:not(:disabled) {
       border: $effects-secondary-color;
