@@ -1,0 +1,206 @@
+@import '../../../app.component.scss';
+
+/**
+* ==========================================================
+* Button
+* ==========================================================
+* - Default Button CSS
+* - Button Size
+* - Button Type
+* - Button Display Type
+*/
+
+
+$box-shadow-default: 100px 0 0 0 rgba(0, 0, 0, 0.15) inset,
+                    -100px 0 0 0 rgba(0, 0, 0, 0.15) inset;
+
+$box-shadow-primary: 100px 0 0 0 getPrimaryColor(500) inset,
+                    -100px 0 0 0 getPrimaryColor(500) inset;
+
+$box-shadow-secondary: 100px 0 0 0 getSecondaryColor(500) inset,
+                      -100px 0 0 0 getSecondaryColor(500) inset;
+
+
+/** 
+*
+*   Button Default CSS
+*
+* - 기본 버튼 CSS 정의
+*/
+button {
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: baseline;
+  overflow: visible;
+  margin: 5px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  transition: all 0.9s, color 0.3s;
+
+
+  &:disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+}
+
+
+/** 
+*
+*   Button Size
+*
+* - sm      : 작은 버튼 사이즈
+* - md      : 중간 버튼 사이즈 (기본값)
+* - lg      : 큰 버튼 사이즈
+*
+*/
+.btn-size-icon-sm {
+  @include setWH(3rem, 3rem);
+}
+
+.btn-size-icon-lg {
+  @include setWH(4.5rem, 4.5rem);
+}
+
+.btn-size-sm {
+  @include setWH(6rem, 3rem);
+}
+
+.btn-size-md {
+  @include setWH(9rem, 4.5rem);
+}
+
+.btn-size-lg {
+  @include setWH(12rem, 6rem);
+}
+
+
+/** 
+*
+*   Button Display Type
+*
+* - flat        : 배경만 존재 (default)
+* - bordered    : 배경 흰색 + border
+* - raised      : flat + box shadow
+*
+*/
+.btn-display-flat {
+  border: none;
+  outline: none;
+
+  &.btn-color-default {
+   
+    &:hover:not(:disabled) {
+      box-shadow: $box-shadow-default;
+    }
+  }
+
+  &.btn-color-primary {
+    background-color: getPrimaryColor(300);
+    color: $bright;
+
+    &:hover:not(:disabled) {
+      box-shadow: $box-shadow-primary;
+    }
+  }
+
+  &.btn-color-secondary {
+    background-color: getSecondaryColor(300);
+    color: $bright;
+
+    &:hover:not(:disabled) {
+      box-shadow: $box-shadow-secondary;
+    }
+  }
+
+  &:disabled {
+    border: none;
+    background-color: $disabled-color;
+    box-shadow: none;
+    color: $dark;
+  }
+}
+
+.btn-display-raised {
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+
+  &.btn-color-default {
+
+  }
+
+  &.btn-color-primary {
+    background-color: getPrimaryColor(300);
+    color: $bright;
+  }
+
+  &.btn-color-secondary {
+    background-color: getSecondaryColor(300);
+    color: $bright;
+  }
+
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    border: none;
+    background-color: $disabled-color;
+    box-shadow: none;
+    color: $dark;
+  }
+}
+
+.btn-display-icon {
+  // 아이콘 후에 작성
+}
+.btn-display-box-icon {
+  border-radius: 50%;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+  &:hover:not(:disabled) {
+    transform: scale(1.1);
+  }
+}
+
+.btn-display-bordered {
+  background-color: $surface-default-color;
+
+  &.btn-color-default {
+    border: 2px solid $dark;
+
+    &:hover:not(:disabled) {
+      border: rgba(0, 0, 0, 0.15);
+      box-shadow: $box-shadow-default;
+      color: $bright;
+    }
+  }
+
+  &.btn-color-primary {
+    border: 2px solid getPrimaryColor(200);
+    color: getPrimaryColor(500);
+    &:hover:not(:disabled) {
+      border: getPrimaryColor(500);
+      box-shadow: $box-shadow-primary;
+      color: $bright;
+    }
+  }
+
+  &.btn-color-secondary {
+    border: 2px solid getSecondaryColor();
+    color: getSecondaryColor(500);
+    &:hover:not(:disabled) {
+      border: getSecondaryColor(500);
+      box-shadow: $box-shadow-secondary;
+      color: $bright;
+    }
+  }
+
+  &:disabled {
+    border: none;
+    background-color: $disabled-color;
+    box-shadow: none;
+    color: $dark;
+  }
+}
