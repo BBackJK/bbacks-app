@@ -10,15 +10,20 @@
 * - Button Display Type
 */
 
+$default-primary-color: getPrimaryColor(300);
+$effects-primary-color: getPrimaryColor(500);
+
+$default-secondary-color: getSecondaryColor(300);
+$effects-secondary-color: getSecondaryColor(500);
 
 $box-shadow-default: 100px 0 0 0 rgba(0, 0, 0, 0.15) inset,
                     -100px 0 0 0 rgba(0, 0, 0, 0.15) inset;
 
-$box-shadow-primary: 100px 0 0 0 getPrimaryColor(500) inset,
-                    -100px 0 0 0 getPrimaryColor(500) inset;
+$box-shadow-primary: 100px 0 0 0 $effects-primary-color inset,
+                    -100px 0 0 0 $effects-primary-color inset;
 
-$box-shadow-secondary: 100px 0 0 0 getSecondaryColor(500) inset,
-                      -100px 0 0 0 getSecondaryColor(500) inset;
+$box-shadow-secondary: 100px 0 0 0 $effects-secondary-color inset,
+                      -100px 0 0 0 $effects-secondary-color inset;
 
 
 /** 
@@ -99,7 +104,7 @@ button {
   }
 
   &.btn-color-primary {
-    background-color: getPrimaryColor(300);
+    background-color: $default-primary-color;
     color: $bright;
 
     &:hover:not(:disabled) {
@@ -108,7 +113,7 @@ button {
   }
 
   &.btn-color-secondary {
-    background-color: getSecondaryColor(300);
+    background-color: $default-secondary-color;
     color: $bright;
 
     &:hover:not(:disabled) {
@@ -132,17 +137,17 @@ button {
   }
 
   &.btn-color-primary {
-    background-color: getPrimaryColor(300);
+    background-color: $default-primary-color;
     color: $bright;
   }
 
   &.btn-color-secondary {
-    background-color: getSecondaryColor(300);
+    background-color: $default-secondary-color;
     color: $bright;
   }
 
   &:hover:not(:disabled) {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &:disabled {
@@ -179,9 +184,9 @@ button {
 
   &.btn-color-primary {
     border: 2px solid getPrimaryColor(200);
-    color: getPrimaryColor(500);
+    color: $effects-primary-color;
     &:hover:not(:disabled) {
-      border: getPrimaryColor(500);
+      border: $effects-primary-color;
       box-shadow: $box-shadow-primary;
       color: $bright;
     }
@@ -189,9 +194,9 @@ button {
 
   &.btn-color-secondary {
     border: 2px solid getSecondaryColor();
-    color: getSecondaryColor(500);
+    color: $effects-secondary-color;
     &:hover:not(:disabled) {
-      border: getSecondaryColor(500);
+      border: $effects-secondary-color;
       box-shadow: $box-shadow-secondary;
       color: $bright;
     }
