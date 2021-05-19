@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 
 import { LayoutModule } from '@layout/layout.module';
 import { PagesModule } from '@modules/pages/pages.module';
+import { ComponentsModule } from '@shared/index';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PagesModule } from '@modules/pages/pages.module';
     , NgxsReduxDevtoolsPluginModule.forRoot()
     , LayoutModule
     , PagesModule
+    , ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
