@@ -30,7 +30,7 @@ input[type="radio"] {
 
   &:hover .radio-outer-circle {
     border: {
-      color: getPrimaryColor(300);
+      color: getPrimaryColor(brighten);
     };
   }
 }
@@ -47,14 +47,14 @@ input[type="radio"] {
 input[type="radio"]:checked {
   & + .radio-outer-circle {
     border: {
-      color: getPrimaryColor(300);
+      color: getPrimaryColor(brighten);
     }
 
 
     & + .radio-inner-circle {
       visibility: visible;
       background: {
-        color: getPrimaryColor(300);
+        color: getPrimaryColor(brighten);
       };
       transform: scale(0.5);
     }

@@ -18,12 +18,12 @@
 }
 
 // get primary color
-@function getPrimaryColor($val: 400) {
+@function getPrimaryColor($val: base) {
   @return getValue($primary-colors, $val);
 }
 
 // get secondary color
-@function getSecondaryColor($val: 200) {
+@function getSecondaryColor($val: brighten) {
   @return getValue($secondary-colors, $val);
 }
 
