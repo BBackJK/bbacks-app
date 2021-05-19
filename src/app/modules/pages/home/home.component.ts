@@ -20,4 +20,8 @@ export class HomeComponent implements OnInit {
     console.log('click');
     console.log(this.test.value);
   }
+
+  closeTest(): void {
+    console.log(1);
+  }
 }

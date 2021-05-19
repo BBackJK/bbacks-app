@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 
 import { LayoutModule } from '@layout/layout.module';
 import { PagesModule } from '@modules/pages/pages.module';
-import { ComponentsModule } from '@shared/index';
+import { ComponentsModule, DirectivesModule } from '@shared/index';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { ComponentsModule } from '@shared/index';
     , LayoutModule
     , PagesModule
     , ComponentsModule
+    , DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
