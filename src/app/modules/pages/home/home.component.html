@@ -49,3 +49,21 @@ This is Home Page.
     </app-link>
   </div>
 </div>
+
+<div>
+  <app-checkbox label="1" value="1" groupName="test" display="inline-flex"></app-checkbox>
+  <app-checkbox label="TWO" value="2" groupName="test" display="inline-flex"></app-checkbox>
+</div>
+
+<div>
+  <app-radio label="하나" value="1" groupName="radio" display="inline-flex" [control]="test"></app-radio>
+  <app-radio label="둘" value="2" groupName="radio" display="inline-flex" [control]="test"></app-radio>
+</div>
+
+<div>
+  <app-button type="button" (event)="onTest()">확인</app-button>
+</div>
+
+<div>
+  <app-input [type]="test.value == 2 ? 'password' : 'text'" [required]="false"></app-input>
+</div>
