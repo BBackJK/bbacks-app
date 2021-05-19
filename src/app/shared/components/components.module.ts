@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './button/button.component';
 import { LinkComponent } from './link/link.component';
 import { InputCheckboxComponent, InputRadioComponent, InputTextComponent } from './input';
-
+import { TextComponent } from './text/text.component';
 
 @NgModule({
   imports: [ CommonModule, ReactiveFormsModule ],
@@ -15,6 +15,7 @@ import { InputCheckboxComponent, InputRadioComponent, InputTextComponent } from 
     , InputCheckboxComponent
     , InputRadioComponent
     , InputTextComponent
+    , TextComponent
   ],
   declarations: [
     ButtonComponent
@@ -22,6 +23,7 @@ import { InputCheckboxComponent, InputRadioComponent, InputTextComponent } from 
     , InputCheckboxComponent
     , InputRadioComponent
     , InputTextComponent
+    , TextComponent
   ]
 })
 export class ComponentsModule {}

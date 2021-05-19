@@ -1,0 +1,6 @@
+<span *ngIf="type === 'inline'" [ngClass]="[textSizeClassName, textColorClassName]">
+  {{ text }}
+</span>
+<div *ngIf="type === 'block'" [ngClass]="[textSizeClassName, textColorClassName]">
+  {{ text }}
+</div>
