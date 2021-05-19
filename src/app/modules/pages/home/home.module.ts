@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { HomeComponent } from './home.component';
 
-import { ComponentsModule } from '@shared/index';
+import { ComponentsModule, DirectivesModule } from '@shared/index';
 
 @NgModule({
-  imports: [ ComponentsModule ],
+  imports: [ ComponentsModule, DirectivesModule ],
   exports: [ HomeComponent ],
   declarations: [ HomeComponent ]
 })
