@@ -8,6 +8,8 @@ import { FormControl } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
+  open: boolean = true;
+
   constructor() {}
 
   test: FormControl = new FormControl('');
@@ -23,5 +25,9 @@ export class HomeComponent implements OnInit {
 
   closeTest(): void {
     console.log(1);
+  }
+
+  onClick():void {
+    this.open = !this.open;
   }
 }
