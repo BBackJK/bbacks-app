@@ -22,10 +22,11 @@ a {
   &:before {
     content: "";
     position: absolute;
+
     left: 0;
-    bottom: 0;
-    height: 2px;
-    background: getPrimaryColor(brighten);
+    bottom: -3px;
+    height: 3px;
+    background: getPrimaryColor();
     width: 100%;
     -webkit-transition: $default-transition;
     transition: $default-transition;
