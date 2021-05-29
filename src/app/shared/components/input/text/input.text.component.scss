@@ -13,12 +13,12 @@ input {
 
   &:focus {
     outline: none !important;
-    transition: $default-transition;
+    transition: all 100ms ease-in-out;
     border: {
       width: 2px;
       style: solid;
       radius: 10px;
-      color: getPrimaryColor(brighten);
+      color: getPrimaryColor();
     }
 
     box-shadow: $default-box-shadow;

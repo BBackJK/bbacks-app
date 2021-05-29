@@ -106,18 +106,26 @@ button {
   &.btn-color-primary {
     background-color: $default-primary-color;
     color: $bright;
+    border: 2px solid $default-primary-color;
 
     &:hover:not(:disabled) {
-      box-shadow: $box-shadow-primary;
+      // box-shadow: $box-shadow-primary;
+      box-shadow: 100px 0 0 0 #fff inset,
+                    -100px 0 0 0 #fff inset;
+      color: $default-primary-color;
     }
   }
 
   &.btn-color-secondary {
     background-color: $default-secondary-color;
     color: $bright;
+    border: 2px solid $default-secondary-color;
 
     &:hover:not(:disabled) {
-      box-shadow: $box-shadow-secondary;
+      // box-shadow: $box-shadow-secondary;
+      box-shadow: 100px 0 0 0 #fff inset,
+                    -100px 0 0 0 #fff inset;
+      color: $default-secondary-color;
     }
   }
 
@@ -147,7 +155,7 @@ button {
   }
 
   &:hover:not(:disabled) {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   &:disabled {
