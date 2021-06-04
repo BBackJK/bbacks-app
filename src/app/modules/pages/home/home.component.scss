@@ -1,0 +1,14 @@
+$default-border: 2px solid black;
+
+.grid-container {
+  border: $default-border;
+  background-color: yellow;
+  padding: 3px;
+  display: grid;
+}
+
+
+.grid-item {
+  border: $default-border;
+  background-color: tomato;
+}
