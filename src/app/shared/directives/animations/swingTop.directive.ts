@@ -20,7 +20,7 @@ export class SwingTopDirective implements OnInit, OnChanges {
     ]));
 
   private readonly SWING_OUT_TOP: AnimationAnimateMetadata = animate(
-    '0.8s'
+    '0.4s'
     , keyframes([
       style({ visibility: 'visible', }),
       style({ transform: 'rotateX(0deg)', transformOrigin: 'top', opacity: 1, }),

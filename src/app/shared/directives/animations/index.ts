@@ -1,1 +1,1 @@
-export { SwingTopDirective } from './swingInTop.directive';
+export { SwingTopDirective } from './swingTop.directive';
