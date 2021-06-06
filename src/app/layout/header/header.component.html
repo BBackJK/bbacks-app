@@ -5,8 +5,12 @@
     </a>
   </div>
   <nav class="nav-container">
-    <a routerLink="calendar">캘린더</a>
-    <!-- <a routerLink="#">패션</a> -->
-    <a routerLink="diary">일기장</a>
+    <section class="nav-container-search">
+      <img src="../../../assets/img/icon/icon-search.png" (click)="onOpenSearch()" />
+    </section>
+    <section class="nav-toggle" (click)="onOpenSidebar()">
+      <div class="nav-toggle__top"></div>
+      <div class="nav-toggle__bottom"></div>
+    </section>
   </nav>
 </header>

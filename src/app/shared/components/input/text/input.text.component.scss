@@ -22,6 +22,15 @@ input {
     }
 
     box-shadow: $default-box-shadow;
+
+    &.error {
+      border-color: $error-color;
+    }
+  }
+
+  &.error {
+    border-color: $error-color;
+    animation: vibration .1s 3;
   }
 }
 
@@ -37,7 +46,6 @@ input {
   width: 30rem;
 }
 
-
 .input-width-long {
   width: 50rem; 
 }
@@ -46,10 +54,29 @@ input {
   width: 100%;
 }
 
+
+
 .input-display-block {
   display: block;
 }
 
 .input-display-inline {
   display: inline;
+}
+
+// .error {
+//   border-color: $error-color;
+//   animation-name: vibration;
+//   animation-duration: 0.2s;
+//   animation-iteration-count: infinite;
+// }
+
+@keyframes vibration {
+  from {
+    transform: translateX(5px);
+  }
+
+  to {
+    transform: translateX(-5px);
+  }
 }

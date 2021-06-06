@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() openSidebar = new EventEmitter();
+  @Output() openSearch = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {
     console.log('header');
   }
+
+  onOpenSidebar(): void {
+    this.openSidebar.emit();
+  }
+
+  onOpenSearch(): void {
+    this.openSearch.emit();
+  }  
 }
