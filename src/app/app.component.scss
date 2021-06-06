@@ -1,12 +1,10 @@
 @import '../styles.scss';
 
-
-// $default-border: 2px solid black;
-
-/** 
-  in this global style
-**/
-
+/**
+* ==========================================================
+* main layout grid
+* ==========================================================
+*/
 .grid-container {
   /** grid system */
   display: grid;
@@ -31,9 +29,45 @@
 
 .grid-contents {
   grid-column: 1/3;
+  margin: 10px;
 }
+
+
+/**
+* ==========================================================
+* generic tag set style
+* ==========================================================
+*/
 
 a {
   text-decoration: none;
   color: $dark;
+}
+
+li {
+  list-style: none;
+}
+
+/**
+* ==========================================================
+* global class set style
+* ==========================================================
+*/
+.nav-toggle {
+
+  cursor: pointer;
+
+  &:hover > div {
+    background-color: getPrimaryColor(darken);
+    transform: scale(1.1);
+    transition: all ease-in-out 300ms;
+  }
+
+
+  & > div {
+    width: 35px;
+    height: 4px;
+    background-color: $dark;
+    margin: 10px;
+  }
 }

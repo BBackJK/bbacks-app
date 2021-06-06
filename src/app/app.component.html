@@ -4,10 +4,22 @@
 
 <div class="grid-container">
   <div class="grid-header">
-    <app-header></app-header>
+    <app-header (openSidebar)="openSidebar($event)" (openSearch)="openSearch($event)"></app-header>
   </div>
   <div class="grid-contents">
     <app-content></app-content>
   </div>
-  <!-- <div class="grid-footer">FOOTER</div> -->
+  <app-shadow-cover [display]="openBox === 'search' ? 'center' : ''" *ngIf="openBox" [ngSwitch]="openBox">
+    <app-sidebar
+      appClickOutSide 
+      (clickOutSide)="closeSidebar($event)" 
+      (onClickPageMenu)="closeSidebar($event)"
+      *ngSwitchCase="'sidebar'"
+    ></app-sidebar>
+    <app-modal-search 
+      appClickOutSide
+      (clickOutSide)="closeSearch($event)"
+      *ngSwitchCase="'search'"
+    ></app-modal-search>
+  </app-shadow-cover>
 </div>

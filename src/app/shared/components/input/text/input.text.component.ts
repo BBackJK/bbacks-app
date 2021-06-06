@@ -12,6 +12,7 @@ export class InputTextComponent implements OnInit, OnChanges {
   @Input() placeholder: string = 'Default Placeholder';
   @Input() required: boolean = false;
   @Input() type: string = 'text';
+  @Input() error: boolean = false;
 
   // input for form 
   @Input() set control(control : FormControl) {
@@ -28,10 +29,13 @@ export class InputTextComponent implements OnInit, OnChanges {
 
   widthClassName: string;
   displayClassName: string;
+  errorClassName!: string;
 
   formControl: FormControl;
 
-  ngOnChanges(): void {}
+  ngOnChanges(): void {
+    this.setClassName();
+  }
 
   ngOnInit(): void {
     this.setClassName();
@@ -40,5 +44,6 @@ export class InputTextComponent implements OnInit, OnChanges {
   setClassName(): void {
     this.displayClassName = this.display ? ('input-display-'+ this.display) : 'input-display-block';
     this.widthClassName = this.width ? ('input-width-' + this.width) : 'input-width-default';
+    this.errorClassName = this.error ? 'error' : '';
   }
 }
