@@ -2,13 +2,13 @@
   <div class="nav-toggle">
     <!-- <div class="nav-toggle__top"></div>
     <div class="nav-toggle__bottom"></div> -->
-    <span>X</span>
+    <span (click)="onCloseSidebar()">X</span>
   </div>
   <ul>
-    <li (click)="clickPage()" routerLink="/calendar">
+    <li (click)="onCloseSidebar()" routerLink="/calendar">
       <a>캘린더</a>
     </li>
-    <li (click)="clickPage()" routerLink="/diary">
+    <li (click)="onCloseSidebar()" routerLink="/diary">
       <a>일기장</a>
     </li>
     <!-- <li (click)="goPage('/calendar')">
