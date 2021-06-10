@@ -1,8 +1,5 @@
-Calendar Detail 
-
-<div>
-  <a routerLink="/">홈으로!!</a>
-</div>
-<div>
-  <a routerLink="/calendar">캘린더로!!</a>
-</div>
+<app-shadow-cover display="center">
+  <div class="calendar-detail-container" appClickOutSide (clickOutSide)="closeDetail()">
+    디테일 {{ date }}
+  </div>
+</app-shadow-cover>

@@ -8,7 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
-  imports: [ AppRoutingModule, DirectivesModule ],
+  imports: [ AppRoutingModule ],
   exports: [ ContentComponent, HeaderComponent, SidebarComponent ],
   declarations: [ ContentComponent, HeaderComponent, SidebarComponent ]
 })

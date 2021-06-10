@@ -1,4 +1,40 @@
-Here is Calendar Pages.
-<div>
-  <a routerLink="detail">디테일로!!</a>
+<div class="calendar-header">
+  <div (click)="selectMonth(selectMonthValue - 1)" class="calendar-header__prev">
+    이전달
+  </div>
+  <div>
+    2021. {{ monthList[selectMonthValue - 1] }}
+  </div>
+  <div (click)="selectMonth(selectMonthValue + 1)" class="calendar-header__next">
+    다음달
+  </div>
 </div>
+<div class="calendar-body">
+  <div class="calendar-body__day">
+    <ul>
+      <li *ngFor="let day of dayList">{{ day }}</li>
+    </ul>
+  </div>
+  <div class="calendar-body__date">
+    <div class="calendar-body__date__card-wrapper" 
+      *ngFor="let date of fullCardList; let idx = index;" 
+      [ngClass]="{ 'today-date': checkTodayDate(idx), 'select-mark': checkSelectMark(date) }"
+      (click)="selectDate(date, selectMonthValue)"
+    >
+      <span class="calendar-body__date__card-tooltip">한번 더 클릭해서 상세 일정을 확인해보세요.</span>
+      <div 
+        class="calendar-body__date__card-header" 
+        [ngClass]="{'today-mark': checkTodayMark(monthList[todayMonth], date), 'select-mark': checkSelectMark(date)}"
+      >
+        <div>
+          {{ date }}
+        </div>
+      </div>
+      <div class="calendar-body__date__card-body">
+        {{ checkTodayDate(idx) ? '일정' : '' }}
+      </div>
+    </div>
+  </div>
+</div>
+<app-calendar-detail *ngIf="isShowDetail" (event)="closeDetail($event)" [selectDate]="selectDateValue">
+</app-calendar-detail>

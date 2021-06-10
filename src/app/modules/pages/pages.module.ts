@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 
 import { HomeModule } from './home/home.module';
 import { DiaryModule } from './diary/diary.module';
-import { CalendarDetailModule , CalendarModule } from './calendar';
+import { CalendarModule } from './calendar/calendar.module';
 
 @NgModule({
   imports: [],
-  exports: [ HomeModule, CalendarModule, DiaryModule, CalendarDetailModule ],
+  exports: [ HomeModule, DiaryModule, CalendarModule ],
   declarations: []
 })
 export class PagesModule {}
