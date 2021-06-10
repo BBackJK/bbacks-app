@@ -7,13 +7,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  @Output() onClickPageMenu = new EventEmitter();
+  @Output() closeSidebar = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  clickPage(): void {
-    this.onClickPageMenu.emit();
+  onCloseSidebar(): void {
+    this.closeSidebar.emit();
   }
 }
