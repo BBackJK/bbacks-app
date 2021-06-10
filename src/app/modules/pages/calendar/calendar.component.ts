@@ -15,6 +15,8 @@ export class CalendarComponent implements OnInit {
   private readonly END_DATE_30_LIMIT_START_DAY: number = 6;
   private readonly DEFAULT_DATE_ARRAY_SIZE_FOR_FIVE_WEEK: number = 35; // 7 * 5
   private readonly DEFAULT_DATE_ARRAY_SIZE_FOR_SIX_WEEK: number = 42; // 7 * 6
+  private readonly SATURDAY: string = '토';
+  private readonly SUNDAY: string = '일';
 
   /** default value */
   today: Date = new Date();
@@ -61,12 +63,12 @@ export class CalendarComponent implements OnInit {
     this.selectMonthStartDateIndex = 0;
     this.selectMonthEndDateIndex = this.fullCardList.length;
 
-    if (this.dayList[selectStartDay] !== '일') {
+    if (this.dayList[selectStartDay] !== this.SUNDAY) {
       this.selectMonthStartDateIndex = selectStartDay;
       this.setSelectPrevMonthDate(new Date(date.getTime()));
     }
 
-    if (this.dayList[selectEndDay] !== '토') {
+    if (this.dayList[selectEndDay] !== this.SATURDAY) {
       this.selectMonthEndDateIndex = this.fullCardList.length - (this.DEFAULT_DATE_COUNT - selectEndDay);
       this.setSelectNextMonthDate(new Date(date.getTime()));
     }
@@ -140,7 +142,7 @@ export class CalendarComponent implements OnInit {
     if (this.selectDateValue === date && this.tempSelectMonthValue === month) {
       this.isShowDetail = true;
     }
-
+    
     this.tempSelectMonthValue = month;
     this.selectDateValue = date;
   }

@@ -5,6 +5,7 @@ import { ComponentsModule, DirectivesModule } from '@shared/index';
 
 import { CalendarComponent } from './calendar.component';
 import { CalendarDetailComponent } from './detail/calendar.detail.component';
+import { CalendarAddComponent } from './add/calendar.add.component';
 
 
 @NgModule({
@@ -13,7 +14,15 @@ import { CalendarDetailComponent } from './detail/calendar.detail.component';
     , ComponentsModule
     , DirectivesModule
   ],
-  exports: [ CalendarComponent, CalendarDetailComponent ],
-  declarations: [ CalendarComponent, CalendarDetailComponent ]
+  exports: [ 
+    CalendarComponent
+    , CalendarDetailComponent
+    , CalendarAddComponent 
+  ],
+  declarations: [ 
+    CalendarComponent
+    , CalendarDetailComponent
+    , CalendarAddComponent 
+  ]
 }) 
 export class CalendarModule {}

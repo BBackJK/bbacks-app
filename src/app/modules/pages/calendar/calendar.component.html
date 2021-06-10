@@ -36,5 +36,5 @@
     </div>
   </div>
 </div>
-<app-calendar-detail *ngIf="isShowDetail" (event)="closeDetail($event)" [selectDate]="selectDateValue">
+<app-calendar-detail *ngIf="isShowDetail" (event)="closeDetail($event)" [selectDate]="selectDateValue" [selectMonth]="tempSelectMonthValue">
 </app-calendar-detail>
