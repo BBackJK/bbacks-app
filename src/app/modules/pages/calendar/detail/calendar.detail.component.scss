@@ -1,0 +1,10 @@
+@import '../../../../app.component.scss';
+
+.calendar-detail-container {
+  position: absolute;
+  width: 80rem;
+  height: 80rem;
+  background: $bright;
+  border-radius: 12px;
+  padding: 20px;
+}

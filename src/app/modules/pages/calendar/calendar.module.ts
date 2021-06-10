@@ -1,13 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ComponentsModule, DirectivesModule } from '@shared/index';
+
 import { CalendarComponent } from './calendar.component';
-import { ComponentsModule } from '@shared/index';
+import { CalendarDetailComponent } from './detail/calendar.detail.component';
 
 
 @NgModule({
-  imports: [ CommonModule, ComponentsModule ],
-  exports: [ CalendarComponent ],
-  declarations: [ CalendarComponent ]
-})
+  imports: [ 
+    CommonModule
+    , ComponentsModule
+    , DirectivesModule
+  ],
+  exports: [ CalendarComponent, CalendarDetailComponent ],
+  declarations: [ CalendarComponent, CalendarDetailComponent ]
+}) 
 export class CalendarModule {}
