@@ -1,19 +1,25 @@
 import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 
-import { Router } from '@angular/router';
+import { addZeroString, fadeInOut } from '@shared/utils';
 @Component({
   selector: 'app-calendar-detail',
   templateUrl: './calendar.detail.component.html',
-  styleUrls: ['./calendar.detail.component.scss']
+  styleUrls: ['./calendar.detail.component.scss'],
+  animations: [
+    fadeInOut
+  ]
 })
 export class CalendarDetailComponent implements OnInit {
 
-  @Input()
-  selectDate: number;
+  @Input() selectDate: number;
+  @Input() selectMonth: number;
 
   @Output() event = new EventEmitter();
 
-  date: number;
+  date: string | number;
+  month: string | number;
+  
+  changeFlag: boolean = false;
 
   constructor() {}
 
@@ -22,7 +28,12 @@ export class CalendarDetailComponent implements OnInit {
   }
 
   setInitDate(): void {
-    this.date = this.selectDate;
+    this.date = addZeroString(this.selectDate);
+    this.month = addZeroString(this.selectMonth);
+  }
+
+  changeAddPage(): void {
+    this.changeFlag = !this.changeFlag;
   }
 
   closeDetail(): void {

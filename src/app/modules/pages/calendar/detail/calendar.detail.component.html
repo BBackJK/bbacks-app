@@ -1,5 +1,38 @@
 <app-shadow-cover display="center">
   <div class="calendar-detail-container" appClickOutSide (clickOutSide)="closeDetail()">
-    디테일 {{ date }}
+    <div class="calendar-detail-header">
+      <app-text textSize="title">
+        2021. {{ month }}. {{ date }}
+      </app-text>
+    </div>
+    <div class="calendar-detail-contents">
+      <!-- <div [ngSwitch]="changeFlag" [@fadeInOut]>
+        <div *ngSwitchCase="true">
+          <app-calendar-add></app-calendar-add>
+        </div>
+        <div *ngSwitchDefault>
+          일정이 없습니다.<br/>
+        </div>
+      </div> -->
+      <div *ngIf="changeFlag" [@fadeInOut]>
+        <app-calendar-add></app-calendar-add>
+      </div>
+      <div *ngIf="!changeFlag" [@fadeInOut]>
+        일정이 없습니다. <br/>
+      </div>
+    </div>
+    <div class="calendar-detail-footer">
+      <!-- <img src='../../../../../assets/img/icon/icon-add.png' (click)="changeAddPage()"/> -->
+      <div class="calendar-detail-footer__icon">
+        <!-- <section>
+          <div class="calendar-detail-footer__icon__add__one"></div>
+          <div class="calendar-detail-footer__icon__add__two"></div>
+        </section> -->
+        <section>
+          <div class="calendar-detail-footer__icon__cancel__one"></div>
+          <div class="calendar-detail-footer__icon__cancel__two"></div>
+        </section>
+      </div>
+    </div>
   </div>
 </app-shadow-cover>
