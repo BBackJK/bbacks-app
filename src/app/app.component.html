@@ -17,7 +17,7 @@
       appClickOutSide 
       *ngSwitchCase="'sidebar'"
       (clickOutSide)="closeSidebar($event)" 
-      (onClickPageMenu)="closeSidebar($event)"
+      (closeSidebar)="closeSidebar($event)"
     ></app-sidebar>
     <app-modal-search 
       appClickOutSide
