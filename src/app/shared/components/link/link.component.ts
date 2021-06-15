@@ -8,11 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LinkComponent implements OnInit {
   
   @Input() isBlank: boolean = false;
-  @Input() link: string;
+  @Input() link?: string = null;
 
   constructor() {}
 
   ngOnInit(): void {
-    console.log(1);
   }
 }
