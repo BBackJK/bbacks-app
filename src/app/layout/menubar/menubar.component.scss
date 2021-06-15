@@ -1,0 +1,42 @@
+@import '../../app.component.scss';
+
+li {
+  float: right;
+  font-size: 2.5rem;
+  margin-right: 20px;
+  padding: 10px;
+  cursor: pointer;
+
+  transition: all ease-in-out 300ms;
+  
+  border-radius: 10px;
+
+  &:hover {
+    // background-color: getPrimaryColor();
+    transform: scale(1.15);
+
+    & > a {
+      color: getPrimaryColor();
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        height: 3px;
+        background: getPrimaryColor();
+        width: 100%;
+        -webkit-transition: $default-transition;
+        transition: $default-transition;
+        -webkit-transform: scaleX(0) translate3d(0, 0, 0);
+        transform: scaleX(0) translate3d(0, 0, 0);
+      }
+
+      &:hover::before {
+        -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    }
+  }
+}
