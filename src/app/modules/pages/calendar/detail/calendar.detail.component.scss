@@ -42,8 +42,12 @@
     border-radius: 50%;
     background-color: getPrimaryColor();
     box-shadow: $default-box-shadow;
+    cursor: pointer;
 
-    &:hover {
+    transform: rotate(0deg);
+    transition: 0.2s;
+
+    &.add-icon {
       transform: rotate(45deg);
       transition: 0.2s;
     }
@@ -63,7 +67,7 @@
     & > section > .calendar-detail-footer__icon__add__two {
       height: 4px;
       width: 36px;
-      margin-top: -18px;
+      margin-top: -19px;
       margin-left: 4px;
     }
 
@@ -77,7 +81,7 @@
     & > section > .calendar-detail-footer__icon__cancel__two {
       height: 4px;
       width: 36px;
-      margin-top: -18px;
+      margin-top: -19px;
       margin-left: 4px;
     }
   }

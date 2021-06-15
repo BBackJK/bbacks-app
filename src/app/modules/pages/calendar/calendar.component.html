@@ -3,7 +3,7 @@
     이전달
   </div>
   <div>
-    2021. {{ monthList[selectMonthValue - 1] }}
+    {{ selectYearValue }}. {{ monthList[selectMonthValue - 1] }}
   </div>
   <div (click)="selectMonth(selectMonthValue + 1)" class="calendar-header__next">
     다음달
@@ -24,7 +24,7 @@
       <span class="calendar-body__date__card-tooltip">한번 더 클릭해서 상세 일정을 확인해보세요.</span>
       <div 
         class="calendar-body__date__card-header" 
-        [ngClass]="{'today-mark': checkTodayMark(monthList[todayMonth], date), 'select-mark': checkSelectMark(date)}"
+        [ngClass]="{ 'today-mark': checkTodayMark(monthList[todayMonth], date), 'select-mark': checkSelectMark(date) }"
       >
         <div>
           {{ date }}
@@ -36,5 +36,11 @@
     </div>
   </div>
 </div>
-<app-calendar-detail *ngIf="isShowDetail" (event)="closeDetail($event)" [selectDate]="selectDateValue" [selectMonth]="tempSelectMonthValue">
+<app-calendar-detail 
+  *ngIf="isShowDetail" 
+  (event)="closeDetail($event)" 
+  [selectDate]="selectDateValue" 
+  [selectMonth]="tempSelectMonthValue"
+  [selectYear]="selectYearValue"
+  >
 </app-calendar-detail>

@@ -25,6 +25,7 @@ export class CalendarComponent implements OnInit {
   fullCardList: number[];
   todayDate: number = this.today.getDate();
   todayMonth: number = this.today.getMonth() + 1;
+  year: number = this.today.getFullYear();
   
   /** select month value */
   selectMonthStartDateIndex: number;
@@ -34,6 +35,9 @@ export class CalendarComponent implements OnInit {
   /** select date value */
   selectDateValue: number;
   tempSelectMonthValue: number;
+
+  /** select year value */
+  selectYearValue: number;
   
   /** select date card detail */
   isShowDetail: boolean = false;
@@ -42,6 +46,7 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit(): void {
     this.selectMonthValue = this.todayMonth;
+    this.selectYearValue = this.year;
     this.setSelectMonthDate(this.today);
   }
 
@@ -129,7 +134,10 @@ export class CalendarComponent implements OnInit {
   }
 
   selectMonth(month: number) {
+
     const date: Date = new Date();
+
+    month = this.calYearForMonthNumber(month);
 
     this.selectMonthValue = month;
 
@@ -139,7 +147,7 @@ export class CalendarComponent implements OnInit {
   }
 
   selectDate(date: number, month: number) {
-    if (this.selectDateValue === date && this.tempSelectMonthValue === month) {
+    if (this.wasSelected(date, month)) {
       this.isShowDetail = true;
     }
     
@@ -152,6 +160,28 @@ export class CalendarComponent implements OnInit {
       return this.selectDateValue === date && this.tempSelectMonthValue === this.selectMonthValue;
     }
     return false;
+  }
+
+  wasSelected(date: number, month: number): boolean {
+    return this.selectDateValue === date && this.tempSelectMonthValue === month;
+  }
+
+  calYearForMonthNumber(month: number): number {
+
+    const isNextYearFlag: boolean = month >= 13;
+    const isPrevYearFlag: boolean = month < 1;
+
+    if (isNextYearFlag) {
+      this.selectYearValue++;
+      return 13 - month + 1;
+    }
+
+    if (isPrevYearFlag) {
+      this.selectYearValue--;
+      return 13 - month - 1;
+    }
+
+    return month;
   }
 
   closeDetail(event): void {
