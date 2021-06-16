@@ -71,7 +71,7 @@
   }
 
   // 선택한 날짜 hover시 tooltip 제공
-  &.select-mark:hover > .calendar-body__date__card-tooltip {
+  &.today-date.select-mark:hover > .calendar-body__date__card-tooltip {
     opacity: 1;
     visibility: visible;
   }
