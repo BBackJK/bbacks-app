@@ -13,28 +13,28 @@
   margin: 50px;
 }
 
-.login-form-header {
+.login-form-title {
   padding: 10px;
   margin-bottom: 10px;
 }
 
-.login-form-input-group {
+.login-form__input__group {
   margin-bottom: 40px;
 }
 
-.login-form-input-label-group {
+.login-form__input__label__group {
   margin: 20px;
   margin-top: 30px;
 }
 
-.login-form-helper-group {
+.login-form__helper__group {
   text-align: right;
   margin-top: 10px;
   margin-right: 13px;
   padding: 5px;
 }
 
-.login-form-button-group {
+.login-form__button__group {
   display: block;
   text-align: center;
   width: 100%;
@@ -60,8 +60,8 @@
     border: 2px solid getPrimaryColor();
 
     font-size: 2rem;
-
     &:disabled {
+
       &:hover {
         cursor: not-allowed;
       }
@@ -74,7 +74,7 @@
   }
 }
 
-.login-form-helper-link {
+.login-form__helper__link {
   font-size: 1.5rem;
   color: getSecondaryColor();
   padding: 2px;
