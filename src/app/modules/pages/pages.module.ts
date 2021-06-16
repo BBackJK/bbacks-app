@@ -4,6 +4,7 @@ import { HomeModule } from './home/home.module';
 import { DiaryModule } from './diary/diary.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
 @NgModule({
   imports: [],
   exports: [ 
@@ -11,6 +12,7 @@ import { LoginModule } from './login/login.module';
     , DiaryModule
     , CalendarModule
     , LoginModule
+    , RegisterModule
   ],
   declarations: []
 })
