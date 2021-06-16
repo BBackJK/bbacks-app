@@ -3,15 +3,14 @@
 .login-container {
   display: flex;
   justify-content: center;
-  // padding-bottom: 2%;
+  align-items: center;
 }
 
 .login-form-wrapper {
-  border: 3px solid getPrimaryColor();
   border-radius: 20px;
   box-shadow: $default-box-shadow;
   padding: 10px;
-  margin: 10px;
+  margin: 50px;
 }
 
 .login-form-header {
@@ -28,13 +27,11 @@
   margin-top: 30px;
 }
 
-.login-form-find {
+.login-form-helper-group {
   text-align: right;
   margin-top: 10px;
-
-  & > span {
-    font-size: 1.2rem;
-  }
+  margin-right: 13px;
+  padding: 5px;
 }
 
 .login-form-button-group {
@@ -55,7 +52,7 @@
 
     background-color: getPrimaryColor();
     color: $bright;
-    
+
     margin-bottom: 5px;
 
     height: 50px;
@@ -74,5 +71,18 @@
       background-color: $bright;
       color: getPrimaryColor();
     }
+  }
+}
+
+.login-form-helper-link {
+  font-size: 1.5rem;
+  color: getSecondaryColor();
+  padding: 2px;
+  transition: $default-transition;
+  cursor: pointer;
+
+  &:hover {
+    color: getPrimaryColor();
+    text-decoration: 3px underline;
   }
 }

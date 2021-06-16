@@ -8,9 +8,14 @@ import { InputCheckboxComponent, InputRadioComponent, InputTextComponent } from 
 import { TextComponent } from './text/text.component';
 import { ShadowCoverComponent } from './cover/shadow.cover.component';
 import { ModalSearchComponent } from './modal';
+import { FlexContainerComponent } from './container';
 
 @NgModule({
-  imports: [ CommonModule, ReactiveFormsModule, FormsModule ],
+  imports: [ 
+    CommonModule
+    , ReactiveFormsModule
+    , FormsModule
+  ],
   exports: [
     ButtonComponent
     , LinkComponent
@@ -20,6 +25,7 @@ import { ModalSearchComponent } from './modal';
     , TextComponent
     , ShadowCoverComponent
     , ModalSearchComponent
+    , FlexContainerComponent
   ],
   declarations: [
     ButtonComponent
@@ -30,6 +36,7 @@ import { ModalSearchComponent } from './modal';
     , TextComponent
     , ShadowCoverComponent
     , ModalSearchComponent
+    , FlexContainerComponent
   ]
 })
 export class ComponentsModule {}
