@@ -5,6 +5,7 @@ import { DiaryModule } from './diary/diary.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { LoginModule } from './login/login.module';
 import { RegisterModule } from './register/register.module';
+import { FindEmailModule, ResetPasswordModule } from './find';
 @NgModule({
   imports: [],
   exports: [ 
@@ -13,6 +14,8 @@ import { RegisterModule } from './register/register.module';
     , CalendarModule
     , LoginModule
     , RegisterModule
+    , FindEmailModule
+    , ResetPasswordModule
   ],
   declarations: []
 })
