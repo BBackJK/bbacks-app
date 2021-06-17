@@ -129,8 +129,8 @@ export class CalendarComponent implements OnInit {
     return index >= this.selectMonthStartDateIndex && index <= this.selectMonthEndDateIndex;
   }
 
-  checkTodayMark(month: string, date: number): boolean {
-    return month === this.monthList[this.selectMonthValue] && date === this.todayDate;
+  checkTodayMark(month: string, date: number, year: number): boolean {
+    return month === this.monthList[this.selectMonthValue] && date === this.todayDate && year === this.year;
   }
 
   selectMonth(month: number) {

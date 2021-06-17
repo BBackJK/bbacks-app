@@ -24,14 +24,14 @@
       <span class="calendar-body__date__card-tooltip">한번 더 클릭해서 상세 일정을 확인해보세요.</span>
       <div 
         class="calendar-body__date__card-header" 
-        [ngClass]="{ 'today-mark': checkTodayMark(monthList[todayMonth], date), 'select-mark': checkSelectMark(date) }"
+        [ngClass]="{ 'today-mark': checkTodayMark(monthList[todayMonth], date, selectYearValue), 'select-mark': checkSelectMark(date) }"
       >
         <div>
           {{ date }}
         </div>
       </div>
       <div class="calendar-body__date__card-body">
-        {{ checkTodayDate(idx) ? '일정' : '' }}
+        <!-- {{ checkTodayDate(idx) ? '일정' : '' }} -->
       </div>
     </div>
   </div>

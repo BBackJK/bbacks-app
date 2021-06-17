@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { ComponentsModule } from '@shared/components/components.module';
 import { AppRoutingModule } from '@modules/app-routing.module';
@@ -9,7 +10,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MenubarComponent } from './menubar/menubar.component';
 
 @NgModule({
-  imports: [ AppRoutingModule, ComponentsModule ],
+  imports: [ 
+    AppRoutingModule
+    , ComponentsModule
+    , CommonModule
+  ],
   exports: [ 
     ContentComponent
     , HeaderComponent
