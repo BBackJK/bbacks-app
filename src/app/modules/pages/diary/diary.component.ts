@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiaryComponent implements OnInit {
 
+  today: Date = new Date();
+
+  year: number = this.today.getFullYear();
+  month: number = this.today.getMonth() + 1;
+  date: number = this.today.getDate();
+
   constructor() {}
 
   ngOnInit(): void {}

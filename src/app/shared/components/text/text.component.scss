@@ -32,6 +32,10 @@
   color: $error-color;
 }
 
+.text-color-gray {
+  color: $disabled-text-color;
+}
+
 .text-color-primary {
   color: getPrimaryColor();
 }
