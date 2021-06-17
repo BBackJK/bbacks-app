@@ -7,9 +7,13 @@
 
   padding: 10px;
 
-  & > div {
-    cursor: pointer;
-  }
+  // & > div {
+  //   cursor: pointer;
+  // }
+}
+
+.calendar-header__prev, .calendar-header__next {
+  cursor: pointer;
 }
 
 .calendar-body {
