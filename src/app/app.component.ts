@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,9 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  _pageYOffset: number = 0;
   openBox: string = '';
 
-  constructor() {}
+  @HostListener('window:scroll', ['$event']) onScroll(event) {
+    this._pageYOffset = window.pageYOffset;
+  }
+
+  constructor(
+    private viewPortScroller: ViewportScroller
+  ) {}
 
   closeSidebar(event): void {
     this.openBox = '';
@@ -24,5 +32,9 @@ export class AppComponent {
 
   closeSearch(event): void {
     this.openBox = '';
+  }
+
+  onClickScrollToTop(): void {
+    this.viewPortScroller.scrollToPosition([0, 0]);
   }
 }
