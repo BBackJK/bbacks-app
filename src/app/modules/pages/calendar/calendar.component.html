@@ -1,12 +1,12 @@
 <div class="calendar-header">
   <div (click)="selectMonth(selectMonthValue - 1)" class="calendar-header__prev">
-    이전달
+    <img src="../../../../assets/img/icon/icon-left-arrow.png" />
   </div>
   <div>
     {{ selectYearValue }}. {{ monthList[selectMonthValue - 1] }}
   </div>
   <div (click)="selectMonth(selectMonthValue + 1)" class="calendar-header__next">
-    다음달
+    <img src="../../../../assets/img/icon/icon-right-arrow.png" />
   </div>
 </div>
 <div class="calendar-body">

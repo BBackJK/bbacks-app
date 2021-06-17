@@ -1,117 +1,26 @@
-This is Home Page.
-
-<div>
-  <app-button display="bordered">
-    border 기본
-  </app-button>
-  <app-button display="bordered" color="primary" (event)="onClick()">
-    border 주
-  </app-button>
-  <app-button display="bordered" color="secondary">
-    border 보조
-  </app-button>
-</div>
-
-<div>
-  <app-button>
-    border 기본
-  </app-button>
-  <app-button color="primary">
-    border 주
-  </app-button>
-  <app-button color="secondary">
-    border 보조
-  </app-button>
-</div>
-
-<div>
-  <app-button display="raised">
-    border 기본
-  </app-button>
-  <app-button color="primary" display="raised">
-    border 주
-  </app-button>
-  <app-button color="secondary" display="raised">
-    border 보조
-  </app-button>
-</div>
-
-
-<div>
-  <div>
-    <app-link [isBlank]="true" link="https://www.naver.com">
-      네이버
-    </app-link>
+<div class="home-container">
+  <div class="home__recent-wrapper">
+    <div class="home__recent__calendar-wrapper">
+      <div class="home__recent__calendar-title">
+        <app-text textSize="title">오늘 일정</app-text>
+        <app-button size="sm" style="float: right;" routerLink="/calendar">더 보기</app-button>
+      </div>
+      <div class="home__recent__calendar-contents">
+        일정이 없습니다.
+      </div>
+    </div>
+    <!-- <div>
+    </div> -->
   </div>
-  <div>
-    <app-link link="https://www.naver.com">
-      네이버
-    </app-link>
+  <div class="home__time-wrapper">
+    <div>
+      <app-text textSize="lg">{{ years }}</app-text>
+    </div>
+    <div>
+      <app-text textSize="xl">{{ months }}. {{ dates }}. ({{ days }})</app-text>
+    </div>
+    <div>
+      <app-text textSize="max">{{ hours }} : {{ minutes }} : {{ seconds }}</app-text>
+    </div>
   </div>
-</div>
-
-<div>
-  <app-checkbox label="1" value="1" groupName="test" display="inline-flex"></app-checkbox>
-  <app-checkbox label="TWO" value="2" groupName="test" display="inline-flex"></app-checkbox>
-</div>
-
-<div>
-  <app-radio label="하나" value="1" groupName="radio" display="inline-flex" [control]="test"></app-radio>
-  <app-radio label="둘" value="2" groupName="radio" display="inline-flex" [control]="test"></app-radio>
-</div>
-
-<div>
-  <app-button type="button" (event)="onTest()">확인</app-button>
-</div>
-
-<div>
-  <app-input [type]="test.value == 2 ? 'password' : 'text'" [required]="false"></app-input>
-</div>
-
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
-</div>
-
-
-<div>
-  <a routerLink="calendar/detail">테스트 달력 디테일로 go!!</a>
-</div>
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
-</div>
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
-</div>
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
-</div>
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
-</div>
-
-<div>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="primary"></app-text>
-  <app-text type="block" text="테스트"></app-text>
-  <app-text type="block" text="테스트" textColor="secondary"></app-text>
 </div>
